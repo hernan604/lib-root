@@ -9,17 +9,17 @@ version 0.001
 
 # SYNOPSIS
 
-lib::root looks for a .perlroot file on parent directories and pushes ./\*/lib to @INC.
+lib::root looks for a .libroot file on parent directories and pushes ./\*/lib to @INC.
 
-When a file does "use lib::root", lib::root will try to read the file parent directories and look for a rootfile (default is .perlroot) that is usually located inside a /some/dir/perl that contains many modules used by your app. Many apps have a /some/dir/perl/.perl-version file inside a perl directory, when that is the case, the app can piggy back on that filename and look for that file instead of .perlroot with the example below:
+When a file does "use lib::root", lib::root will try to read the file parent directories and look for a rootfile (default is .libroot) that is usually located inside a /some/dir/perl that contains many modules used by your app. Many apps have a /some/dir/perl/.perl-version file inside a perl directory, when that is the case, the app can piggy back on that filename and look for that file instead of .libroot with the example below:
 
     use lib::root rootfile => '.perl-version';
 
-To use the defaults, create an empty file named .perlroot and place it in your /app/dir/perl/.perlroot
+To use the defaults, create an empty file named .libroot and place it in your /app/dir/perl/.libroot
 
     use lib::root;
 
-    ... or use another custom file to determine a perlroot
+    ... or use another custom file to determine a libroot
 
     use lib::root rootfile => '.perl-version';
 
@@ -35,7 +35,7 @@ To use the defaults, create an empty file named .perlroot and place it in your /
 
 lib::root can be useful when your application perl modules are not installed globally.
 
-When your app uses lib::root, the lib::root will look for the .perlroot file into parent directories relative to the file using it.
+When your app uses lib::root, the lib::root will look for the .libroot file into parent directories relative to the file using it.
 
 For example, your app has the following structure:
 

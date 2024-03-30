@@ -1,4 +1,4 @@
-name = "lib::root"
+name = "lib-root"
 badges = ["github-actions/test.yml"]
 module_maker="ModuleBuildTiny"
 static_install = "auto"
