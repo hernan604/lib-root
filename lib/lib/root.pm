@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use Path::Tiny;
 
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 sub import
 {
@@ -82,6 +82,7 @@ To use the defaults, create an empty file named .libroot and place it in your /a
 
   ... or use another custom file to determine a libroot
 
+  use lib::root; # rootfile defaults to .libroot
   use lib::root rootfile => '.perl-version';
 
   ... or add a callback if needed
@@ -137,6 +138,18 @@ Or use lib
   use lib "/home/user/MyApp/lib";
 
 Or some other way ...
+
+=head2 SEE ALSO
+
+Similar ideas have been implemented before in the modules below and possibly others
+
+=item * RepRoot
+
+L<https://metacpan.org/pod/RepRoot>
+
+=item * lib::glob
+
+L<https://metacpan.org/pod/lib::glob>
 
 =head1 LICENSE
 
