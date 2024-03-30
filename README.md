@@ -5,7 +5,7 @@ lib::root - find perl root and push lib modules path to @INC
 
 # VERSION
 
-version 0.01
+version 0.02
 
 # SYNOPSIS
 
@@ -21,6 +21,7 @@ To use the defaults, create an empty file named .libroot and place it in your /a
 
     ... or use another custom file to determine a libroot
 
+    use lib::root; # rootfile defaults to .libroot
     use lib::root rootfile => '.perl-version';
 
     ... or add a callback if needed
@@ -77,6 +78,18 @@ Or use lib
 
 Or some other way ...
 
+## SEE ALSO
+
+Similar ideas have been implemented before in the modules below and possibly others
+
+- RepRoot
+
+    [https://metacpan.org/pod/RepRoot](https://metacpan.org/pod/RepRoot)
+
+- lib::glob
+
+    [https://metacpan.org/pod/lib::glob](https://metacpan.org/pod/lib::glob)
+
 # LICENSE
 
 Copyright (C) Hernan Lopes.
@@ -87,3 +100,15 @@ it under the same terms as Perl itself.
 # AUTHOR
 
 Hernan Lopes <hernan@smallcompany.net>
+
+# POD ERRORS
+
+Hey! **The above document had some coding errors, which are explained below:**
+
+- Around line 146:
+
+    '=item' outside of any '=over'
+
+- Around line 154:
+
+    You forgot a '=back' before '=head1'
