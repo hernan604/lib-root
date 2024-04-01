@@ -212,7 +212,7 @@ it under the same terms as Perl itself.
 
 =head1 AUTHOR
 
-Hernan Lopes E<lt>hernan@smallcompany.netE<gt>
+Hernan Lopes
 
 =cut
 
