@@ -2,8 +2,9 @@ package lib::root;
 use strict;
 use warnings;
 use Path::Tiny;
+use Cwd;
 
-our $VERSION = "0.03";
+our $VERSION = "0.04";
 
 sub import
 {
