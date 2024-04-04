@@ -4,7 +4,8 @@ use warnings;
 use Path::Tiny;
 use Cwd;
 
-our $VERSION = "0.04";
+our $VERSION = "0.05";
+my $root;
 
 sub import
 {
@@ -42,6 +43,7 @@ sub import
 
   if ( $found )
   {
+    $root = $found->parent;
     push @INC, glob $lib_paths;
     $callback->( $lib_paths, $found )
       if $callback;
@@ -51,6 +53,11 @@ sub import
     warn
       "lib::root error: Could not find rootfile [ $rootfile ]. lib::root loaded from [ $caller_file ].";
   }
+}
+
+sub root
+{
+  return $root;
 }
 
 1;
@@ -67,7 +74,7 @@ lib::root - find perl root and push lib modules path to @INC
 
 =head1 VERSION
 
-version 0.04
+version 0.05
 
 =head1 SYNOPSIS
 

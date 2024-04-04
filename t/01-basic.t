@@ -39,6 +39,7 @@ my %paths = (
     is $libpaths, path( @expected_lib_path ), 'modules are in perl/*/lib';
     is $rootfile, path( @expected_rootfile_path ),
       'found default .libroot file';
+    is path( @expected_rootfile_path )->parent, lib::root->root, 'got root dir';
   };
   lib::root->import(
     caller_file => $paths{ one },
@@ -56,6 +57,7 @@ my %paths = (
       = ( Path::Tiny->rootdir, qw|tmp app-root-test perl .perl-version| );
     is $libpaths, path( @expected_lib_path ), 'modules are in perl/*/lib';
     is $rootfile, path( @expected_rootfile_path ), 'found .perl-version';
+    is path( @expected_rootfile_path )->parent, lib::root->root, 'got root dir';
   };
   lib::root->import(
     caller_file => $paths{ two },
@@ -74,6 +76,7 @@ my %paths = (
       = ( Path::Tiny->rootdir, qw|tmp app-root-test perl .perl-version| );
     is $libpaths, path( @expected_lib_path ), 'modules are in perl/*/lib';
     is $rootfile, path( @expected_rootfile_path ), 'found .perl-version';
+    is path( @expected_rootfile_path )->parent, lib::root->root, 'got root dir';
   };
   lib::root->import(
     caller_file => $paths{ bin_script },
@@ -93,6 +96,7 @@ my %paths = (
       = ( Path::Tiny->rootdir, qw|tmp app-root-test perl .libroot| );
     is $libpaths, path( @expected_lib_path ), 'modules are in perl/*/lib';
     is $rootfile, path( @expected_rootfile_path ), 'found .libroot';
+    is path( @expected_rootfile_path )->parent, lib::root->root, 'got root dir';
   };
   lib::root->import(
     caller_file => $paths{ bin_script2 },
@@ -113,6 +117,7 @@ my %paths = (
       = ( Path::Tiny->rootdir, qw|tmp app-root-test perl-app2 * lib| );
     is $libpaths, path( @expected_lib_path ), 'modules are in perl/*/lib';
     is $rootfile, path( @expected_rootfile_path ), 'found .libroot';
+    is path( @expected_rootfile_path )->parent, lib::root->root, 'got root dir';
   };
   lib::root->import(
     caller_file => $paths{ bin_script2 },
@@ -133,6 +138,7 @@ my %paths = (
       qw|tmp app-root-test sub dir perl-app3 * lib| );
     is $libpaths, path( @expected_lib_path ), 'modules are in perl/*/lib';
     is $rootfile, path( @expected_rootfile_path ), 'found .libroot';
+    is path( @expected_rootfile_path )->parent, lib::root->root, 'got root dir';
   };
   lib::root->import(
     caller_file => $paths{ bin_script2 },
@@ -156,6 +162,7 @@ my %paths = (
       qw|tmp app-root-test sub dir perl-app4 * lib| );
     is $libpaths, path( @expected_lib_path ), 'modules are in perl/*/lib';
     is $rootfile, path( @expected_rootfile_path ), 'found .app-root';
+    is path( @expected_rootfile_path )->parent, lib::root->root, 'got root dir';
   };
   lib::root->import(
     rootfile    => '.app-root',
