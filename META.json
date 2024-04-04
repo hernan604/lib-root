@@ -1,7 +1,7 @@
 {
    "abstract" : "find perl root and push lib modules path to @INC",
    "author" : [
-      "Hernan Lopes <hernan@smallcompany.net>"
+      "Hernan Lopes"
    ],
    "dynamic_config" : 0,
    "generated_by" : "Minilla/v3.1.23, CPAN::Meta::Converter version 2.150010",
@@ -60,7 +60,10 @@
          "url" : "git://git.smallcompany.net/smallcompany/lib-root.git"
       }
    },
-   "version" : "0.04",
+   "version" : "0.05",
+   "x_contributors" : [
+      "Hernan Lopes <hernan@smallcompany.net>"
+   ],
    "x_serialization_backend" : "JSON::PP version 4.16",
    "x_static_install" : 1
 }

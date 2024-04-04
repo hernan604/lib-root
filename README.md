@@ -5,7 +5,7 @@ lib::root - find perl root and push lib modules path to @INC
 
 # VERSION
 
-version 0.04
+version 0.05
 
 # SYNOPSIS
 
@@ -146,4 +146,4 @@ it under the same terms as Perl itself.
 
 # AUTHOR
 
-Hernan Lopes <hernan@smallcompany.net>
+Hernan Lopes
