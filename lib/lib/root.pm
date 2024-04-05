@@ -4,7 +4,7 @@ use warnings;
 use Path::Tiny;
 use Cwd;
 
-our $VERSION = "0.05";
+our $VERSION = "0.06";
 my $root;
 
 sub import
@@ -74,7 +74,7 @@ lib::root - find perl root and push lib modules path to @INC
 
 =head1 VERSION
 
-version 0.05
+version 0.06
 
 =head1 SYNOPSIS
 
@@ -193,6 +193,18 @@ The same could be done to make the .pm files above also use the C<.app-root> ins
 If necessary, lib::root also accepts a callback as an option. The callback is executed after libs are pushed to @INC ie:
 
   use lib::root callback => sub { ... };
+
+=head3 EXAMPLE 5 - GET ROOT DIR
+
+IT is also possible to get the root dir calling the root sub:
+
+  my $rootdir = lib::root->root;
+
+=head3 EXAMPLE 5 - GET ROOT DIR
+
+IT is also possible to get the root dir calling the root sub:
+
+  my $rootdir = lib::root->root;
 
 =head2 SEE ALSO
 

@@ -2,6 +2,11 @@ Revision history for Perl extension lib::root
 
 {{$NEXT}}
 
+0.06 2024-04-05T02:25:56Z
+
+    - update tests. smoke test reports failing for darwin
+    - update docs for sub root feature that returns root dir
+
 0.05 2024-04-04T23:49:25Z
 
     - create new sub that returns the root dir path

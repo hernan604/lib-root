@@ -5,7 +5,7 @@ lib::root - find perl root and push lib modules path to @INC
 
 # VERSION
 
-version 0.05
+version 0.06
 
 # SYNOPSIS
 
@@ -124,6 +124,18 @@ The same could be done to make the .pm files above also use the `.app-root` inst
 If necessary, lib::root also accepts a callback as an option. The callback is executed after libs are pushed to @INC ie:
 
     use lib::root callback => sub { ... };
+
+### EXAMPLE 5 - GET ROOT DIR
+
+IT is also possible to get the root dir calling the root sub:
+
+    my $rootdir = lib::root->root;
+
+### EXAMPLE 5 - GET ROOT DIR
+
+IT is also possible to get the root dir calling the root sub:
+
+    my $rootdir = lib::root->root;
 
 ## SEE ALSO
 
