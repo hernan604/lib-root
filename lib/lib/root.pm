@@ -4,7 +4,7 @@ use warnings;
 use Path::Tiny;
 use Cwd;
 
-our $VERSION = "0.08";
+our $VERSION = "0.09";
 
 my $root;
 
@@ -86,7 +86,7 @@ lib::root - find perl root and push lib modules path to @INC
 
 =head1 VERSION
 
-version 0.08
+version 0.09
 
 =head1 SYNOPSIS
 
